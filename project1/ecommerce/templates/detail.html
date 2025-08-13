@@ -1,0 +1,35 @@
+<html>
+    <center>
+        <body>
+            <h1>  PRODUCTS   DASHBOARD</h1>
+            <form method="POST" action="details">
+            {% csrf_token %}
+            <p>Category : <select name="category" onchange="this.form.submit()">
+                <option>Select Category</option>
+                {% for cat in category %}
+                <option value="{{ cat.category_id }}"> {{ cat.category_name }}</option>
+                {% endfor %}
+            </select></p>
+        </form>
+        {% if prod %}
+        <table border="1"cellpadding="10" cellspacing="0"> 
+            <!-- <table border-collapse:collapse;>  -->
+            <tr><th> PRODUCT NAME </th><th>  DESCRIPTION  </th><th>  PRICE </th> <th> PRODUCT IMAGE</th> <th> ORDER ITEM</th></tr> 
+            <tr>
+            {% for p in prod %}
+            <td>{{ p.product_name }}</td>
+            <td>{{ p.product_description }}</td>
+            <td>{{ p.product_price }}</td>  
+            <td><img src="{{ p.image.url }}"" alt="{{ p.item_name }}" width="150px"></td>
+            <td><a href="{% url 'onerecord' %}?product_id={{ p.product_id }}">Views</a></td>
+        </tr>
+
+            <!-- <td colspan="5" style="text-align: center;"> <a href="home">HOMEPAGE</a> </td> -->
+            {% endfor %}
+        {% endif %}
+          <td colspan="5" style="text-align: center;"> <a href="home">HOMEPAGE</a> </td>
+
+        </table>
+        </body>
+    </center>
+</html>

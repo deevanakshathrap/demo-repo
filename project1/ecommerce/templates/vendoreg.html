@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <center>
+            <h1> VENDOR REGISTRATION </h1>
+            <form method="POST" action="venprocess">
+            {% csrf_token %}
+            <p> Name :  <input type="text" name="venname"></p>
+            <p> User Name :  <input type="text" name="uname"></p>
+            <p> Email : <input type="text" name="venemail"></p>
+            <p> City :  <input type="text" name="vencity"></p>
+            <p> Password :  <input type="text" name="venpwd"></p>
+            <p> Address :   <input type="text" name="venaddress"></p>
+            <p><input type="submit" value="Register"></p>
+            </form>
+        </center>
+    </body>
+</html>

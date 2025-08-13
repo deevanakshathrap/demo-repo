@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <center>
+         <table>
+          <form method="POST" action="oneprocess">
+            {% csrf_token %}
+            <th colspan="2"><h2>{{ Product.category_id }}</h2></th>
+            <tr><td><img src="{{ Product.image.url }}"" alt="{{ Product.item_name }}" width="150px"></td></tr>
+            <tr><td>Item Name:</td><td>{{ Product.product_name }}</td></tr>
+            <tr><td>Price:</td><td>{{ Product.product_price }}</td></tr>
+            <tr><td>Description:</td><td>{{ Product.product_description }}</td></tr>
+            <tr><td>Quantity:</td><td><input type="number" name="quantity" required /></td></tr>
+            <input type="hidden" name="product_id" value="{{ Product.product_id }}">
+            <input type="hidden" name="pname" value="{{ Product.product_name }}">
+            <input type="hidden" name="category_id" value="{{ Product.category_id.category_name }}">
+            <input type="hidden" name="pprice" value="{{ Product.product_price }}">
+            <tr><td><button type="submit">Order</button></td></tr>
+        
+         </form>
+        </table>
+        
+      </center>
+      
+  </body>
+
+ </html>

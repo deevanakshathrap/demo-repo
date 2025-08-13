@@ -1,0 +1,12 @@
+<html>
+    <center>
+    <h1>CATEGORY REGISTRATION PAGE</h1>
+    <body>
+        <form method="POST" action="catprocess">
+        {% csrf_token %}
+        <p>Category Name : <input type="text" name="category_name"></p>
+        <p><input type="submit" value="REGISTER"></p>
+        </form>
+    </body>
+    </center>
+</html>

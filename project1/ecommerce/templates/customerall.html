@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <center>
+        <h1>CUSTOMER DETAILS </h1>
+        <table border="1"cellpadding="10" cellspacing="0">
+            <tr><th>CUSTOMER NAME</th><th>CUSTOMER CITY</th><th>CUSTOMER EMAIL</th><th>CUSTOMER PASSWORD</th><th>CUSTOMER ADDRESS </th></tr>
+            {% for cus in customer %}
+            <tr>
+                <td>{{ cus.customer_name }}</td>
+                <td>{{ cus.customer_city }}</td>
+                <td>{{ cus.customer_email }}</td>
+                <td>{{ cus.customer_password }}</td>
+                <td>{{ cus.customer_address }}</td>
+            </tr>
+            {% endfor %}
+            <!-- <tr><td colspan="2"<center><a href="home">HOMEPAGE</a></center></td></tr> -->
+            <td colspan="5" style="text-align: center;"> <a href="home">HOMEPAGE</a> </td>
+        </table>
+    </center>
+    </body>
+</html>

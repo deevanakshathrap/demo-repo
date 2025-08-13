@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <center>
+        <form method="POST">
+            {% csrf_token %}
+        <table>
+            <tr><th> CATEGORY NAME </th><th>PRODUCT NAME </th><th> PRODUCT PRICE </th><th>QUANTITY</th><th>TOTAL PRICE </th></tr>
+            {% for item in cart %}
+            <tr>
+                <td>{{ item.category_id}}</td>
+                <td>{{ item.product_name}}</td>
+                <td>{{ item.product_price}}</td>
+                <td>{{ item.quantity}}</td>
+                <td>{{ item.total_price}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td><input type="submit"value="Clear"/></td>
+            </tr>
+                
+            
+        </table>
+
+        </form>
+        </center>
+    </body>
+</html>

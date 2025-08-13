@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <center><h1>PRODUCT DETAILS </h1>
+            <table border="1"cellpadding="10" cellspacing="0">
+               <b> <tr><th> PRODUCT NAME </th><th>  CATEGORY </th><th><center>  DESCRIPTION  </center></th><th>  PRICE </th> <th> PRODUCT IMAGE</th></tr> </b>
+            {% for prod in product %}
+                <tr>
+                    <td>{{ prod.product_name }}</td>
+                    <td>{{ prod.category_id }}</td>
+                    <td>{{ prod.product_description }}</td>
+                    <td>{{ prod.product_price }}</td>
+                    <td>{% if prod.image %}
+                        <img src="{{ prod.image.url }}" alt="{{prod.item_name}}" width="150px">
+                        {% endif %}
+                    </td>
+                     
+                </tr>
+            {% endfor %}
+            <td>
+            </table>
+            <p><a href="home">HOMEPAGE</a></p>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    <body><h1> Category Details</h1>
+        <table border="1"cellpadding="10" cellspacing="0">
+            <tr><th>Category Name </th></tr>
+            {% for cat in category %}
+            <tr>
+                <td>{{ cat.category_name }}</td>
+            </tr>
+            {% endfor %}
+            <center> <tr><td colspan="2"><a href="home">HOMEPAGE</a></center></td></tr>
+
+        </table>
+    </body>
+</html>

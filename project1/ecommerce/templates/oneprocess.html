@@ -1,0 +1,17 @@
+
+<html>
+  <body>
+    <center>
+        <table>
+          <tr><th colspan="2"><h2>Order Details</h2></th></tr>
+          <tr><td>Category Name</td><td>{{ category_id }}</td></tr>
+          <tr><td>Product Name</td><td>{{ product_name }}</td></tr>
+          <tr><td>Price</td><td>{{ product_price }}</td></tr>
+          <tr><td>Quantity</td><td>{{ quantity }}</td></tr>
+          <tr><td>Total Price</td><td>{{ total_price }}</td></tr>
+          <tr><td><a href="totalproduct">confirm</a></td></tr>
+          <tr><td colspan="2"><a href="{% url 'details' %}"> Go Back</a></td></tr>
+        </table>
+    </center>
+  </body>
+</html>

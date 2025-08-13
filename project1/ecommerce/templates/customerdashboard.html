@@ -1,0 +1,22 @@
+<html>
+<body>
+    <h2>Welcome, {{ customer.username }}</h2>
+
+    <form method="POST" action="{% url 'customerhome' %}">
+        {% csrf_token %}
+        <input type="submit" name="action" value="Me">
+    </form>
+
+
+
+
+
+    {% if show %}
+        <h3>Your Details</h3>
+        <p>Name: {{ customer.customer_name }}</p>
+        <p>Email: {{ customer.user.email }}</p>
+        <p>Address: {{ customer.customer_address }}</p>
+    {% endif %}
+
+</body>
+</html> 

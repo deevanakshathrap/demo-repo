@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <center>
+            <h1>PRODUCT REGISTRATION FORM </h1>
+            <form method="post" action="{% url 'product_process' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>Product Name : <input type="text" name="pname"></p>
+                <p>Product Description : <input type="text" name="pdes"></p>
+                <p>Product Price : <input type="text" name="pprice"></p>
+                <p>Category : <select name="category">
+                    {% for cat in category %}
+                    <option value={{ cat.category_id }}>{{ cat.category_name }}</option>
+                    {% endfor %}
+                </select></p>
+                <p>Upload Product Image: <input type="file" name="productimage"></p>
+                <p> <input type="submit" value="REGISTER"></p>
+                <P><a href="home"> HOME </a></P>
+            </form>
+        </center>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

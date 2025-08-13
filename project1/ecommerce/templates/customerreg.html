@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <center>
+            <h1> CUSTOMER REGISTRATION </h1>
+            <form method="POST" action="custprocess">
+            {% csrf_token %}
+            <p> Name :  <input type="text" name="cusname"></p>
+            <p> Username :<input type="text" name="uname"></p>
+            <p> Email : <input type="text" name="cusemail"></p>
+            <p> City :  <input type="text" name="cuscity"></p>
+            <p> Password :  <input type="text" name="cuspwd"></p>
+            <p> Address :   <input type="text" name="cusaddress"></p>
+            <p><input type="submit" value="Register"></p>
+            </form>
+        </center>
+    </body>
+</html>
